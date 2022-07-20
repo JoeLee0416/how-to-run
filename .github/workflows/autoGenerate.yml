@@ -28,7 +28,7 @@ jobs:
     - name: push _book to branch gh-pages
       env:
         TOKEN: ${{secrets.TOKEN}}
-        REF: github.com/${{github.repository}}
+        REF: https://github.com/ZeHoLee/how-to-run.git
         MYEMAIL: 1019265267@qq.com
         MYNAME: ${{github.repository_owner}}
       run: |
