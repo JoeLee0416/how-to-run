@@ -31,7 +31,7 @@ jobs:
 
       - name: push _book to branch gh-pages
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REF: github.com/${{github.repository}}
           MYEMAIL: 1019265267@qq.com                  # ！！记得修改为自己github设置的邮箱
           MYNAME: ${{github.repository_owner}}
@@ -40,7 +40,7 @@ jobs:
           echo ${TOKEN}
           echo ${REF}
           echo ${MYEMAIL}
-          echo ${MYNAME}
+          echo https://${TOKEN}@${REF}
           git config --global user.email "${MYEMAIL}"
           git config --global user.name "${MYNAME}"
           git init
