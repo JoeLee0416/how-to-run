@@ -1,4 +1,4 @@
-name： auto-generate-gitbook
+name: auto-generate-gitbook
 on:
   push:
     branches:
