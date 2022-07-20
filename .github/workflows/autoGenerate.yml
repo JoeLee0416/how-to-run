@@ -31,13 +31,13 @@ jobs:
 
       - name: push _book to branch gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
           REF: github.com/${{github.repository}}
           MYEMAIL: 1019265267@qq.com                  # ！！记得修改为自己github设置的邮箱
           MYNAME: ${{github.repository_owner}}
         run: |
           cd _book
-          echo ${GITHUB_TOKEN}
+          echo ${TOKEN}
           echo ${REF}
           echo ${MYEMAIL}
           echo ${MYNAME}
