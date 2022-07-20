@@ -31,7 +31,7 @@ jobs:
 
       - name: push _book to branch gh-pages
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REF: github.com/${{github.repository}}
           MYEMAIL: 1019265267@qq.com                  # ！！记得修改为自己github设置的邮箱
           MYNAME: ${{github.repository_owner}}
@@ -45,5 +45,3 @@ jobs:
           git commit -m "Updated By Github Actions With Build ${{github.run_number}} of ${{github.workflow}} For Github Pages"
           git branch -M main
           git push --force --quiet "https://${TOKEN}@${REF}" main:gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
