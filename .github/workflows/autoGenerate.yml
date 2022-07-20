@@ -27,7 +27,7 @@ jobs:
         cp SUMMARY.md _book
     - name: push _book to branch gh-pages
       env:
-        TOKEN: ${{secrets.TOKEN}}
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REF: github.com/${{github.repository}}
         MYEMAIL: 1019265267@qq.com
         MYNAME: ${{github.repository_owner}}
